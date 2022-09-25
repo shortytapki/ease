@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 7.5rem;
+  margin-bottom: 0.8rem;
+
+  &__logo {
+    padding: 3rem 0 0 3rem;
+  }
+
+  & .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 2.7rem 3rem 0 0;
+    gap: 6.4rem;
+
+    &__item:link,
+    &__item:visited {
+      font-size: 21px;
+      line-height: 133.84%;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+      color: $link-color;
+      text-decoration: none;
+      transition: all 0.1s ease;
+    }
+
+    &__item:hover,
+    &__item:active {
+      cursor: pointer;
+      color: $link-color-shade;
+    }
+  }
+}
