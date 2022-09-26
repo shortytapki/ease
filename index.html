@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Ease</title>
   </head>
-  <body class="b-page">
+  <body>
     <div class="container">
       <header class="header">
         <img src="assets/ease.svg" alt="ease" class="header__logo" />
@@ -20,7 +20,8 @@
           </ul>
         </nav>
       </header>
-      <main class="main">
+      <section class="home"></section>
+      <!-- <main class="main">
         <section class="home">
           <div class="col-1">
             <div class="col-1-text">
@@ -47,13 +48,14 @@
               <div class="col-1-description-sidebar">
                 <div
                   class="col-1-description-sidebar__item col-1-description-sidebar__item--active"
+                  data-id="1"
                 >
                   <img src="assets/lamp1-small.png" alt="" />
                 </div>
-                <div class="col-1-description-sidebar__item">
+                <div class="col-1-description-sidebar__item" data-id="2">
                   <img src="assets/lamp2-small.png" alt="" />
                 </div>
-                <div class="col-1-description-sidebar__item">
+                <div class="col-1-description-sidebar__item" data-id="3">
                   <img src="assets/lamp3-small.png" alt="" />
                 </div>
                 <div class="col-1-description-sidebar-toggle">
@@ -90,10 +92,19 @@
             </div>
           </div>
           <div class="col-2">
-            <img src="assets/lamp1-medium.png" alt="" class="col-2__lamp" />
+            <img
+              src="assets/webp/hero/hero-img.webp"
+              srcset="
+                assets/webp/hero/hero-img.webp,
+                assets/webp/hero/hero-img@2x.webp 2x,
+                assets/webp/hero/hero-img@3x.webp 3x
+              "
+              alt=""
+              class="col-2__hero-img"
+            />
           </div>
-        </section>
-      </main>
+        </section> -->
     </div>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

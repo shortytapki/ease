@@ -1,4 +1,30 @@
-* {
+.container {
+  margin: 0 auto;
+  max-width: 160rem;
+  padding: 0 3rem 3rem;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 7.5rem;
+}
+.header__logo {
+  padding-top: 3rem;
+}
+.header .nav {
+  padding-top: 2.7rem;
+}
+.header .nav-list {
+  display: flex;
+  gap: 3rem;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,178 +35,38 @@ html {
 }
 
 body {
-  background-color: #dbeeee;
-  font-family: "SF Compact Display Medium";
+  background-color: var(--background-color);
+  font-family: sans-serif;
   height: 100vh;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 160rem;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-@font-face {
-  font-family: "SF Compact Display Thin";
-  font-style: normal;
-  font-weight: normal;
-  src: local("SF Compact Display Thin"), url("sf-compact-display-thin-58646eb43a785.woff") format("woff");
-}
-@font-face {
-  font-family: "SF Compact Display Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: local("SF Compact Display Medium"), url("sf-compact-display-medium-5864711817c30.woff") format("woff");
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  max-height: 7.5rem;
-  margin-bottom: 0.8rem;
-}
-.header__logo {
-  padding: 3rem 0 0 3rem;
-}
-.header .nav-list {
-  display: flex;
+ul {
   list-style: none;
-  padding: 2.7rem 3rem 0 0;
-  gap: 6.4rem;
-}
-.header .nav-list__item:link, .header .nav-list__item:visited {
-  font-size: 21px;
-  line-height: 133.84%;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-  color: #3d9090;
-  text-decoration: none;
-  transition: all 0.1s ease;
-}
-.header .nav-list__item:hover, .header .nav-list__item:active {
-  cursor: pointer;
-  color: #255656;
 }
 
-.main {
-  height: 100%;
-}
-.main .home {
-  display: grid;
-  grid-template-columns: 46% 54%;
-}
-.main .home .col-1-text {
-  padding: 8.3rem 6.728rem 8rem 3.6rem;
-  border-bottom: 1px solid #c4c4c4;
-}
-.main .home .col-1-text__item {
-  font-family: "SF Compact Display Thin";
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  letter-spacing: 0.055em;
-  color: #000000;
-}
-.main .home .col-1-description {
-  position: relative;
-  padding: 15.8rem 3.921rem 0 3.9rem;
-  z-index: 10;
-}
-.main .home .col-1-description-box {
-  max-width: 27.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.main .home .col-1-description__image {
-  position: absolute;
-  top: 0;
-  left: 29.4rem;
-}
-.main .home .col-1-description-sidebar {
-  position: absolute;
-  top: 4.1rem;
-  right: -1.172rem;
-  width: 17.8rem;
-  height: 55.4rem;
-  background-color: #bddddd;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  z-index: -1;
-  overflow: hidden;
-}
-.main .home .col-1-description-sidebar-toggle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  height: 8.6rem;
-}
-.main .home .col-1-description-sidebar-toggle__sun, .main .home .col-1-description-sidebar-toggle__moon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main .home .col-1-description-sidebar-toggle__sun {
-  background-color: #fff3da;
-}
-.main .home .col-1-description-sidebar-toggle__moon {
-  background-color: #94a6a6;
-}
-.main .home .col-1-description-sidebar__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.7rem 2.8rem 2rem 1.7rem;
-  width: 13.3rem;
-  height: 13.1rem;
-  border-radius: 14px;
-}
-.main .home .col-1-description-sidebar__item:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.25);
-}
-.main .home .col-1-description-sidebar__item--active, .main .home .col-1-description-sidebar__item--active:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.main .home .col-1-description .description-item {
-  font-family: "SF Compact Display Medium";
-  font-size: 1.6rem;
+a:link,
+a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--link-color);
+  font-weight: 400;
+  font-size: 2.1rem;
   line-height: 133.84%;
   letter-spacing: 0.055em;
-  font-weight: 400;
-  color: #000000;
 }
-.main .home .col-1-description .description-item__thin-string {
-  font-family: "SF Compact Display Thin";
-  font-weight: 100;
-}
-.main .home .col-1-description::before {
-  content: "";
-  width: 46.217rem;
-  height: 45.047rem;
-  background: #e4d7b9;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  border-radius: 50%;
-  top: 2.5rem;
-  left: -5.695rem;
-  position: absolute;
-  z-index: -1;
-}
-.main .home .col-2 {
-  z-index: 10;
-  background-image: url("../../assets/hero-img.png");
-  background-position: center;
-  background-size: cover;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 18px;
-  min-height: 109.5rem;
-  margin: 0 3rem 3rem 0;
-  position: relative;
-}
-.main .home .col-2__lamp {
-  position: absolute;
-  top: 0;
-  left: 21.572rem;
+
+:root {
+  --background-color: #dbeeee;
+  --link-color: #3d9090;
+  --link-color-shade: #255656;
+  --black: #000000;
+  --line-color: #c4c4c4;
+  --big-circle-color: #e4d7b9;
+  --sidebar-bg-color: #bddddd;
+  --active-sidebar-item-bg-color: rgba(255, 255, 255, 0.5);
+  --sidebar-item-bg-hover-color: rgba(255, 255, 255, 0.25);
+  --sun-toggle-bg-color: #fff3da;
+  --moon-toggle-bg-color: #94a6a6;
 }
 
 /*# sourceMappingURL=style.css.map */

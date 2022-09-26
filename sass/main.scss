@@ -1,10 +1,5 @@
-// Importing from abstracts
-@import 'abstracts/variables';
-
-// Importing from base
-@import 'base/base';
-@import 'base/typography';
-
-// Importing from components
-@import 'components/header';
-@import 'components/home';
+@use './abstracts/abstracts';
+@use './components/components';
+@use './globals/globals';
+@use './layout/layout';
+@use './util/util';
