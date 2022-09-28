@@ -1,4 +1,3 @@
-@mixin displayFlexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
+@mixin mainHorizontalPadding() {
+  padding: 0 3rem;
 }

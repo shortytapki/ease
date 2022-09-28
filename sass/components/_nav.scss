@@ -1,18 +1,18 @@
-.header {
+@use '../abstracts' as abs;
+
+.nav {
   display: flex;
   justify-content: space-between;
   max-height: 7.5rem;
+  @include abs.mainHorizontalPadding();
 
   &__logo {
     padding-top: 3rem;
   }
 
-  .nav {
+  &-list {
+    display: flex;
+    gap: 3rem;
     padding-top: 2.7rem;
-
-    &-list {
-      display: flex;
-      gap: 3rem;
-    }
   }
 }

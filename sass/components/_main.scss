@@ -1,0 +1,47 @@
+.left-col {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: 57.4rem;
+
+  .description {
+    position: relative;
+    overflow-x: hidden;
+
+    &__image {
+      position: absolute;
+      left: 29.4rem;
+      top: 0;
+      max-width: 15.8rem;
+      object-fit: contain;
+    }
+  }
+
+  .description::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 46.217rem;
+    height: 45.047rem;
+    left: -5.695rem;
+    top: 2.5rem;
+    background-color: var(--big-circle-color);
+    z-index: -1;
+  }
+}
+
+.right-col {
+  overflow: hidden;
+  height: fit-content;
+  width: fit-content;
+  flex-basis: 86.7rem;
+  // max-width: 86.752rem;
+  justify-self: end;
+  border-radius: 18px;
+  box-shadow: 0px 4px 4px var(--drop-shadow-color);
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+  }
+}

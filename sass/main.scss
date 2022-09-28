@@ -1,5 +1,5 @@
-@use './abstracts/abstracts';
-@use './components/components';
-@use './globals/globals';
-@use './layout/layout';
-@use './util/util';
+@forward 'components';
+@forward 'globals';
+@forward 'layout';
+@forward 'util';
+@forward 'abstracts';

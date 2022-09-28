@@ -4,107 +4,124 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://fonts.cdnfonts.com/css/sf-compact-display"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Ease</title>
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <img src="assets/ease.svg" alt="ease" class="header__logo" />
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#" class="nav-list__item">Collections</a></li>
-            <li><a href="#" class="nav-list__item">Blog</a></li>
-            <li><a href="#" class="nav-list__item">About</a></li>
-            <li><a href="#" class="nav-list__item">Contacts</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section class="home"></section>
-      <!-- <main class="main">
-        <section class="home">
-          <div class="col-1">
-            <div class="col-1-text">
-              <p class="col-1-text__item">
-                Collection of lighting is inspired by the geometric works of the
-                great Suprematist artists Kissitzky and Kazimir Malevich.
-              </p>
-              <br />
-              <br />
-              <p class="col-1-text__item">
-                Suprematism is a modernist movement in the art of the early
-                twentieth century, focused on the basic geometric forms, such as
-                circles, squares, lines and rectangles. The geometric structure
-                of the lamps will always look like a small art objects in your
-                house.
-              </p>
-            </div>
-            <div class="col-1-description">
-              <img
-                src="assets/lamp1.png"
-                alt=""
-                class="col-1-description__image"
-              />
-              <div class="col-1-description-sidebar">
-                <div
-                  class="col-1-description-sidebar__item col-1-description-sidebar__item--active"
-                  data-id="1"
-                >
-                  <img src="assets/lamp1-small.png" alt="" />
-                </div>
-                <div class="col-1-description-sidebar__item" data-id="2">
-                  <img src="assets/lamp2-small.png" alt="" />
-                </div>
-                <div class="col-1-description-sidebar__item" data-id="3">
-                  <img src="assets/lamp3-small.png" alt="" />
-                </div>
-                <div class="col-1-description-sidebar-toggle">
-                  <div class="col-1-description-sidebar-toggle__sun">
-                    <img src="assets/sun-icon.svg" alt="" />
-                  </div>
-                  <div class="col-1-description-sidebar-toggle__moon">
-                    <img src="assets/moon-icon.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="col-1-description-box">
-                <strong class="description-item"
-                  >Material:
-                  <span class="description-item__thin-string">Copper</span>
-                </strong>
-                <strong class="description-item"
+      <nav class="nav">
+        <img src="assets/svg/ease.svg" alt="ease logo" class="nav__logo" />
+        <ul class="nav-list">
+          <li><a href="#" class="nav-list__item">Collections</a></li>
+          <li><a href="#" class="nav-list__item">Blog</a></li>
+          <li><a href="#" class="nav-list__item">About</a></li>
+          <li><a href="#" class="nav-list__item">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <main class="grid">
+        <section class="left-col">
+          <div class="textbox textbox--primary">
+            <p class="textbox__paragraph--primary">
+              Collection of lighting is inspired by the geometric works of the
+              great Suprematist artists Kissitzky and Kazimir Malevich.<br /><br />
+
+              Suprematism is a modernist movement in the art of the early
+              twentieth century, focused on the basic geometric forms, such as
+              circles, squares, lines and rectangles. The geometric structure of
+              the lamps will always look like a small art objects in your house.
+            </p>
+          </div>
+          <div class="line"></div>
+          <section class="description">
+            <div class="textbox textbox--secondary">
+              <p class="textbox__paragraph--secondary">
+                <strong class="desc-item"
+                  >Material: <span class="desc-item__thin">Copper</span></strong
+                ><br /><br />
+                <strong class="desc-item"
                   >Dimensions (cm):
-                  <span class="description-item__thin-string"
+                  <span class="desc-item__thin"
                     >H 33 x W 15 x D 15</span
-                  >
-                </strong>
-                <strong class="description-item"
+                  ></strong
+                ><br /><br />
+                <strong class="desc-item"
                   >Net Weight:
-                  <span class="description-item__thin-string">2,5 kg</span>
-                </strong>
-                <strong class="description-item"
-                  >Electrification: <br />
-                  <span class="description-item__thin-string"
+                  <span class="desc-item__thin">2,5 kg</span></strong
+                ><br /><br />
+                <strong class="desc-item"
+                  >Electrification: <br /><span class="desc-item__thin"
                     >LED 10W | G9 | 220-240V | 50 Hz</span
-                  >
-                </strong>
-              </div>
+                  ></strong
+                >
+              </p>
             </div>
-          </div>
-          <div class="col-2">
             <img
-              src="assets/webp/hero/hero-img.webp"
-              srcset="
-                assets/webp/hero/hero-img.webp,
-                assets/webp/hero/hero-img@2x.webp 2x,
-                assets/webp/hero/hero-img@3x.webp 3x
-              "
+              src="assets/webp/big-lamps/lamp1/lamp1-big.webp"
               alt=""
-              class="col-2__hero-img"
+              srcset="
+                assets/webp/big-lamps/lamp1/lamp1-big.webp    1x,
+                assets/webp/big-lamps/lamp1/lamp1-big@2x.webp 2x,
+                assets/webp/big-lamps/lamp1/lamp1-big@3x.webp 3x
+              "
+              class="description__image"
             />
-          </div>
-        </section> -->
+            <article class="lamp-select">
+              <ul class="lamp-list">
+                <li class="lamp-list__item lamp-list__item--active">
+                  <img
+                    src="assets/webp/small-lamps/lamp1/lamp1-small.webp"
+                    alt=""
+                    srcset="
+                      assets/webp/small-lamps/lamp1/lamp1-small.webp    1x,
+                      assets/webp/small-lamps/lamp1/lamp1-small@2x.webp 2x,
+                      assets/webp/small-lamps/lamp1/lamp1-small@3x.webp 3x
+                    "
+                  />
+                </li>
+                <li class="lamp-list__item">
+                  <img
+                    src="assets/webp/small-lamps/lamp2/lamp2-small.webp"
+                    alt=""
+                    srcset="
+                      assets/webp/small-lamps/lamp2/lamp2-small.webp    1x,
+                      assets/webp/small-lamps/lamp2/lamp2-small@2x.webp 2x,
+                      assets/webp/small-lamps/lamp2/lamp2-small@3x.webp 3x
+                    "
+                  />
+                </li>
+                <li class="lamp-list__item">
+                  <img
+                    src="assets/webp/small-lamps/lamp3/lamp3-small.webp"
+                    alt=""
+                    srcset="
+                      assets/webp/small-lamps/lamp3/lamp3-small.webp    1x,
+                      assets/webp/small-lamps/lamp3/lamp3-small@2x.webp 2x,
+                      assets/webp/small-lamps/lamp3/lamp3-small@3x.webp 3x
+                    "
+                  />
+                </li>
+              </ul>
+            </article>
+          </section>
+        </section>
+        <section class="right-col">
+          <img
+            src="assets/webp/hero/hero-img.webp"
+            alt="Interior decorated with selected lamp"
+            srcset="
+              assets/webp/hero/hero-img.webp    1x,
+              assets/webp/hero/hero-img@2x.webp 2x,
+              assets/webp/hero/hero-img@3x.webp 3x
+            "
+            class="right-col__image"
+          />
+        </section>
+      </main>
     </div>
-    <script defer src="js/script.js"></script>
   </body>
 </html>

@@ -1,25 +1,138 @@
 .container {
   margin: 0 auto;
   max-width: 160rem;
-  padding: 0 3rem 3rem;
-  overflow-x: hidden;
-  height: 100%;
 }
 
-.header {
+.nav {
   display: flex;
   justify-content: space-between;
   max-height: 7.5rem;
+  padding: 0 3rem;
 }
-.header__logo {
+.nav__logo {
   padding-top: 3rem;
 }
-.header .nav {
-  padding-top: 2.7rem;
-}
-.header .nav-list {
+.nav-list {
   display: flex;
   gap: 3rem;
+  padding-top: 2.7rem;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: 57.4rem;
+}
+.left-col .description {
+  position: relative;
+  overflow-x: hidden;
+}
+.left-col .description__image {
+  position: absolute;
+  left: 29.4rem;
+  top: 0;
+  max-width: 15.8rem;
+  object-fit: contain;
+}
+.left-col .description::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 46.217rem;
+  height: 45.047rem;
+  left: -5.695rem;
+  top: 2.5rem;
+  background-color: var(--big-circle-color);
+  z-index: -1;
+}
+
+.right-col {
+  overflow: hidden;
+  height: fit-content;
+  width: fit-content;
+  flex-basis: 86.7rem;
+  justify-self: end;
+  border-radius: 18px;
+  box-shadow: 0px 4px 4px var(--drop-shadow-color);
+}
+.right-col__image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.textbox {
+  height: auto;
+}
+.textbox--primary {
+  padding: 8.3rem 0 8rem 3rem;
+}
+.textbox--secondary {
+  padding: 15.8rem 33.628rem 31.8rem 3.9rem;
+}
+
+.lamp-select {
+  position: absolute;
+  top: 4.1rem;
+  right: 0;
+  width: 16.628rem;
+  height: auto;
+  background-color: var(--lamp-select-bg-color);
+  z-index: 999;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+.lamp-select .lamp-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.7rem 0 2.8rem;
+}
+.lamp-select .lamp-list__item {
+  border-radius: 14px;
+  width: 13.3rem;
+  height: 13.1rem;
+  text-align: center;
+}
+.lamp-select .lamp-list__item:hover {
+  background-color: var(--lamp-select-bg-hover-color);
+  cursor: pointer;
+}
+.lamp-select .lamp-list__item--active, .lamp-select .lamp-list__item--active:hover {
+  background-color: var(--lamp-select-active-bg-color);
+}
+
+:root {
+  --background-color: #dbeeee;
+  --link-color: #3d9090;
+  --link-color-shade: #255656;
+  --black: #000000;
+  --line-color: #c4c4c4;
+  --big-circle-color: #e4d7b9;
+  --lamp-select-bg-color: #bddddd;
+  --lamp-select-active-bg-color: rgba(255, 255, 255, 0.5);
+  --lamp-select-bg-hover-color: rgba(255, 255, 255, 0.25);
+  --sun-toggle-bg-color: #fff3da;
+  --moon-toggle-bg-color: #94a6a6;
+  --drop-shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+@font-face {
+  font-family: "SF Compact Display Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF Compact Display Thin"), url("../../assets/font/sf-compact-display-thin-58646eb43a785.woff") format("woff");
+}
+@font-face {
+  font-family: "SF Compact Display Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF Compact Display Medium"), url("../../assets/font/sf-compact-display-medium-5864711817c30.woff") format("woff");
+}
+.line {
+  height: 1px;
+  background-color: var(--line-color);
 }
 
 *,
@@ -36,8 +149,7 @@ html {
 
 body {
   background-color: var(--background-color);
-  font-family: sans-serif;
-  height: 100vh;
+  font-family: "SF Compact Display";
 }
 
 ul {
@@ -55,18 +167,36 @@ a:visited {
   letter-spacing: 0.055em;
 }
 
-:root {
-  --background-color: #dbeeee;
-  --link-color: #3d9090;
-  --link-color-shade: #255656;
-  --black: #000000;
-  --line-color: #c4c4c4;
-  --big-circle-color: #e4d7b9;
-  --sidebar-bg-color: #bddddd;
-  --active-sidebar-item-bg-color: rgba(255, 255, 255, 0.5);
-  --sidebar-item-bg-hover-color: rgba(255, 255, 255, 0.25);
-  --sun-toggle-bg-color: #fff3da;
-  --moon-toggle-bg-color: #94a6a6;
+.textbox__paragraph {
+  letter-spacing: 0.055em;
+}
+.textbox__paragraph--primary {
+  font-weight: 100;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+.textbox__paragraph--secondary {
+  font-weight: 100;
+  font-size: 1.6rem;
+  line-height: 133.84%;
+}
+
+.desc-item {
+  font-weight: 400;
+}
+.desc-item__thin {
+  font-weight: 100;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+}
+
+.flex {
+  display: flex;
+  padding: 0.8rem 3rem 3rem 0;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
