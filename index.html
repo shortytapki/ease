@@ -23,7 +23,7 @@
         </ul>
       </nav>
 
-      <main class="grid">
+      <main class="flex">
         <section class="left-col">
           <div class="textbox textbox--primary">
             <p class="textbox__paragraph--primary">
@@ -60,53 +60,7 @@
                 >
               </p>
             </div>
-            <img
-              src="assets/webp/big-lamps/lamp1/lamp1-big.webp"
-              alt=""
-              srcset="
-                assets/webp/big-lamps/lamp1/lamp1-big.webp    1x,
-                assets/webp/big-lamps/lamp1/lamp1-big@2x.webp 2x,
-                assets/webp/big-lamps/lamp1/lamp1-big@3x.webp 3x
-              "
-              class="description__image"
-            />
-            <article class="lamp-select">
-              <ul class="lamp-list">
-                <li class="lamp-list__item lamp-list__item--active">
-                  <img
-                    src="assets/webp/small-lamps/lamp1/lamp1-small.webp"
-                    alt=""
-                    srcset="
-                      assets/webp/small-lamps/lamp1/lamp1-small.webp    1x,
-                      assets/webp/small-lamps/lamp1/lamp1-small@2x.webp 2x,
-                      assets/webp/small-lamps/lamp1/lamp1-small@3x.webp 3x
-                    "
-                  />
-                </li>
-                <li class="lamp-list__item">
-                  <img
-                    src="assets/webp/small-lamps/lamp2/lamp2-small.webp"
-                    alt=""
-                    srcset="
-                      assets/webp/small-lamps/lamp2/lamp2-small.webp    1x,
-                      assets/webp/small-lamps/lamp2/lamp2-small@2x.webp 2x,
-                      assets/webp/small-lamps/lamp2/lamp2-small@3x.webp 3x
-                    "
-                  />
-                </li>
-                <li class="lamp-list__item">
-                  <img
-                    src="assets/webp/small-lamps/lamp3/lamp3-small.webp"
-                    alt=""
-                    srcset="
-                      assets/webp/small-lamps/lamp3/lamp3-small.webp    1x,
-                      assets/webp/small-lamps/lamp3/lamp3-small@2x.webp 2x,
-                      assets/webp/small-lamps/lamp3/lamp3-small@3x.webp 3x
-                    "
-                  />
-                </li>
-              </ul>
-            </article>
+            <img src="" alt="" class="description__image" />
           </section>
         </section>
         <section class="right-col">
@@ -120,8 +74,58 @@
             "
             class="right-col__image"
           />
+          <img src="" alt="" class="right-col__image--medium" />
+          <article class="lamp-select">
+            <ul class="lamp-list">
+              <li class="lamp-list__item lamp-list__item--active">
+                <img
+                  src="assets/webp/small-lamps/lamp1/lamp1-small.webp"
+                  alt=""
+                  srcset="
+                    assets/webp/small-lamps/lamp1/lamp1-small.webp    1x,
+                    assets/webp/small-lamps/lamp1/lamp1-small@2x.webp 2x,
+                    assets/webp/small-lamps/lamp1/lamp1-small@3x.webp 3x
+                  "
+                  data-id="1"
+                />
+              </li>
+              <li class="lamp-list__item">
+                <img
+                  src="assets/webp/small-lamps/lamp2/lamp2-small.webp"
+                  alt=""
+                  srcset="
+                    assets/webp/small-lamps/lamp2/lamp2-small.webp    1x,
+                    assets/webp/small-lamps/lamp2/lamp2-small@2x.webp 2x,
+                    assets/webp/small-lamps/lamp2/lamp2-small@3x.webp 3x
+                  "
+                  data-id="2"
+                />
+              </li>
+              <li class="lamp-list__item">
+                <img
+                  src="assets/webp/small-lamps/lamp3/lamp3-small.webp"
+                  alt=""
+                  srcset="
+                    assets/webp/small-lamps/lamp3/lamp3-small.webp    1x,
+                    assets/webp/small-lamps/lamp3/lamp3-small@2x.webp 2x,
+                    assets/webp/small-lamps/lamp3/lamp3-small@3x.webp 3x
+                  "
+                  data-id="3"
+                />
+              </li>
+            </ul>
+            <div class="buttons">
+              <button class="btn btn--sun">
+                <img src="assets/svg/sun-icon.svg" alt="" class="btn__icon" />
+              </button>
+              <button class="btn btn--moon">
+                <img src="assets/svg/moon-icon.svg" alt="" class="btn__icon" />
+              </button>
+            </div>
+          </article>
         </section>
       </main>
     </div>
+    <script defer src="js/script.js"></script>
   </body>
 </html>
