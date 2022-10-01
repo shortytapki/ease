@@ -5,6 +5,7 @@ const sunBtn = document.querySelector('.btn--sun');
 const moonBtn = document.querySelector('.btn--moon');
 const heroImg = document.querySelector('.right-col__image');
 const initHeroImgSource = heroImg.getAttribute('src');
+const initHeroImgSourceSet = heroImg.getAttribute('srcset');
 
 let data = [];
 let src1 = '';
@@ -15,29 +16,36 @@ let isDarkMode = false;
 sidebarItems.forEach((item) => {
   item.addEventListener('click', () => {
     const id = item.children[0].dataset.id;
-    removeActiveClasses();
+    if (!isDarkMode) {
+      removeActiveClasses();
+      item.classList.add('lamp-list__item--active');
+    }
     switch (id) {
       case '2':
-        bigLamp.style.left = '30rem';
-        bigLamp.setAttribute('src', src2);
-        setInitCond();
-        mediumLamp.setAttribute('src', src2);
-        break;
+        if (!isDarkMode) {
+          bigLamp.setAttribute('src', src2);
+          setInitMediumImagePos();
+          mediumLamp.setAttribute('src', src2);
+          break;
+        }
       case '3':
-        bigLamp.style.left = '23.1rem';
+        bigLamp.style.left = '33%';
         bigLamp.setAttribute('src', src3);
-        mediumLamp.setAttribute('src', src3);
+        if (!isDarkMode) {
+          mediumLamp.setAttribute('src', src3);
+        }
         mediumLamp.style.top = '-11rem';
-        mediumLamp.style.left = '24%';
-        isDarkMode = data.at;
+        mediumLamp.style.max;
+        mediumLamp.style.left = '20.5%';
         break;
       default:
-        bigLamp.style.left = '29.4rem';
-        bigLamp.setAttribute('src', src1);
-        setInitCond();
-        mediumLamp.setAttribute('src', src1);
+        if (!isDarkMode) {
+          bigLamp.style.left = '43%';
+          bigLamp.setAttribute('src', src1);
+          setInitMediumImagePos();
+          mediumLamp.setAttribute('src', src1);
+        }
     }
-    item.classList.add('lamp-list__item--active');
   });
 });
 
@@ -47,13 +55,25 @@ function removeActiveClasses() {
   );
 }
 
-function setInitCond() {
+function setInitMediumImagePos() {
   mediumLamp.style.left = '25%';
   mediumLamp.style.top = '0';
+  bigLamp.style.left = '43%';
+}
+
+function setInitCond() {
+  setInitMediumImagePos();
+  mediumLamp.setAttribute('src', src1);
+  bigLamp.setAttribute('src', src1);
+  removeActiveClasses();
+  console.log(sidebarItems[0]);
+  sidebarItems[0].classList.add('lamp-list__item--active');
   heroImg.setAttribute('src', initHeroImgSource);
+  heroImg.setAttribute('srcset', initHeroImgSourceSet);
 }
 
 moonBtn.addEventListener('click', () => {
+  isDarkMode = true;
   mediumLamp.setAttribute('src', '');
   heroImg.setAttribute('src', 'assets/webp/hero/hero-img-dark.webp');
   heroImg.setAttribute(
@@ -64,18 +84,27 @@ moonBtn.addEventListener('click', () => {
   );
 });
 
-async function fetchData() {
-  const response = await fetch(
-    'https://private-anon-b86aaf46c1-lampshop.apiary-mock.com/lamps',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+sunBtn.addEventListener('click', () => {
+  isDarkMode = false;
+  setInitCond();
+});
 
-  const data = await response.json();
-  return data;
+async function fetchData() {
+  try {
+    const response = await fetch(
+      'https://private-anon-b86aaf46c1-lampshop.apiary-mock.com/lamps',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    alert(`Failed to fetch data: ${err}`);
+  }
 }
 
 async function setSources() {
